@@ -7,10 +7,10 @@ import java.util.Set;
 
 @Entity
 @NoArgsConstructor
-@AllArgsConstructor
 @Builder
 @Getter
 @Setter
+@AllArgsConstructor
 public class ProductCategory {
 
     @Id
