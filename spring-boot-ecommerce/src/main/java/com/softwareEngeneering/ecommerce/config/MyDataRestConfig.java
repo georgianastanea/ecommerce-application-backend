@@ -39,6 +39,17 @@ public class MyDataRestConfig implements RepositoryRestConfigurer  {
                 .withItemExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedMethods))
                 .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedMethods));
 
+        config.getExposureConfiguration()
+                .forDomainType(Country.class)
+                .withItemExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedMethods))
+                .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedMethods));
+
+        config.getExposureConfiguration()
+                .forDomainType(State.class)
+                .withItemExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedMethods))
+                .withCollectionExposure((metdata, httpMethods) -> httpMethods.disable(theUnsupportedMethods));
+
+
         exposeIds(config);
 
 
